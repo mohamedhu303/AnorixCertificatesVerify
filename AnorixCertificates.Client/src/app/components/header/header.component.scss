@@ -8,19 +8,14 @@
   padding: 0 28px;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(8px);
 }
 
 .header-container {
   width: 100%;
   max-width: 1410px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
   box-sizing: border-box;
 }
 
@@ -28,7 +23,7 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -46,10 +41,6 @@
 }
 
 .back-btn {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -74,16 +65,17 @@
     border-color 0.2s ease,
     box-shadow 0.2s ease,
     transform 0.2s ease;
+  flex-shrink: 0;
 
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-    transform: translateY(calc(-50% - 1px));
+    transform: translateY(-1px);
   }
 
   &:active {
-    transform: translateY(-50%);
+    transform: translateY(0);
   }
 
   &:focus-visible {

@@ -10,6 +10,7 @@
 
     <!-- Back Button Section -->
     <button
+      *ngIf="showBackButton"
       type="button"
       class="back-btn"
       (click)="goBack()"

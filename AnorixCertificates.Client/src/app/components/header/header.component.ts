@@ -1,11 +1,11 @@
+import { CommonModule, Location } from '@angular/common';
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -14,6 +14,10 @@ export class HeaderComponent {
     private location: Location,
     private router: Router,
   ) {}
+
+  get showBackButton(): boolean {
+    return !this.router.url.startsWith('/search');
+  }
 
   goBack(): void {
     try {
@@ -27,6 +31,6 @@ export class HeaderComponent {
       }
     } catch {}
 
-    this.router.navigate(['/search']); // ← هنا
+    this.router.navigate(['/search']);
   }
 }

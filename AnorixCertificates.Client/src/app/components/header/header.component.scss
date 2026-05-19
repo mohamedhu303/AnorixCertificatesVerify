@@ -1,3 +1,45 @@
+.anorix-header {
+  width: 100%;
+  height: 75px;
+  background-color: #05123C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 28px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1410px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 210px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
 .back-btn {
   display: inline-flex;
   align-items: center;
@@ -19,6 +61,7 @@
   white-space: nowrap;
   outline: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
 
   &:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -61,6 +104,15 @@
 }
 
 @media (max-width: 768px) {
+  .anorix-header {
+    padding: 0 16px;
+  }
+
+  .logo {
+    width: 170px;
+    height: 42px;
+  }
+
   .back-btn {
     height: 40px;
     padding: 0 12px;
@@ -69,6 +121,11 @@
 }
 
 @media (max-width: 480px) {
+  .logo {
+    width: 145px;
+    height: 38px;
+  }
+
   .back-btn {
     width: 40px;
     height: 40px;

@@ -8,7 +8,15 @@
   <!-- Invalid -->
   <div class="invalid-section" *ngIf="!isLoading && !isValid">
     <div class="invalid-card">
-      <div class="invalid-icon">⚠️</div>
+      <div class="invalid-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+             stroke="#DC2626" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
       <h2>Certificate Not Valid</h2>
       <p>{{ errorMessage }}</p>
       <a routerLink="/home" class="btn-home">Back to Home</a>
@@ -61,7 +69,15 @@
 
       <!-- Error -->
       <div class="image-error" *ngIf="imageError">
-        <div class="error-icon">⚠️</div>
+        <div class="error-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+               stroke="#DC2626" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
         <p>Certificate image could not be loaded</p>
         <button class="btn-retry" (click)="retryImageLoad()">
           Try Again

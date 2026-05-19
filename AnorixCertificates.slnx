@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="AnorixCertificates.API/AnorixCertificates.API.csproj" />
+  <Project Path="AnorixCertificates.Core/AnorixCertificates.Core.csproj" />
+  <Project Path="AnorixCertificates.Infrastructure/AnorixCertificates.Infrastructure.csproj" />
+</Solution>

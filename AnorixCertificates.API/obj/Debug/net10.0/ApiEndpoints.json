@@ -1,0 +1,90 @@
+[
+  {
+    "ContainingType": "AnorixCertificates.API.Controllers.CertificatesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Certificates/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AnorixCertificates.API.Controllers.CertificatesController",
+    "Method": "DecodeCertificateId",
+    "RelativePath": "api/Certificates/decode/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AnorixCertificates.API.Controllers.CertificatesController",
+    "Method": "GetCertificateImage",
+    "RelativePath": "api/Certificates/image/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AnorixCertificates.API.Controllers.CertificatesController",
+    "Method": "GetStats",
+    "RelativePath": "api/Certificates/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AnorixCertificates.API.Controllers.CertificatesController",
+    "Method": "TestConnection",
+    "RelativePath": "api/Certificates/test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AnorixCertificates.API.Controllers.CertificatesController",
+    "Method": "Verify",
+    "RelativePath": "api/Certificates/verify/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AnorixCertificates.Core.DTOs.VerifyCertificateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

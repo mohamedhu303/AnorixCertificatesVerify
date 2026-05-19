@@ -1,0 +1,243 @@
+<div class="page-wrapper">
+
+  <app-header></app-header>
+
+  <!-- Loading -->
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <!-- Invalid -->
+  <div class="invalid-section" *ngIf="!isLoading && !isValid">
+    <div class="invalid-card">
+      <div class="invalid-icon">⚠️</div>
+      <h2>Certificate Not Valid</h2>
+      <p>{{ errorMessage }}</p>
+      <a routerLink="/home" class="btn-home">Back to Home</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content" *ngIf="!isLoading && isValid && certificate">
+
+    <!-- VERIFIED BANNER -->
+    <section class="verified-banner">
+      <div class="verified-left">
+        <div class="check-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  stroke="white" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="verified-text">
+          <h2 class="verified-title">Certificate Verified</h2>
+          <p class="verified-sub">This certificate is authentic and valid</p>
+        </div>
+      </div>
+      <div class="verified-right">
+        <p class="verified-label">Verified on</p>
+        <p class="verified-date">{{ verifiedAt }}</p>
+      </div>
+    </section>
+
+    <!-- CERTIFICATE IMAGE -->
+    <section class="certificate-image-container">
+
+      <!-- Loading Spinner -->
+      <div class="image-loading" *ngIf="imageLoading && !imageError">
+        <div class="spinner"></div>
+        <p>Loading certificate image...</p>
+      </div>
+
+      <!-- Image -->
+      <img
+        *ngIf="imageUrl && !imageError"
+        [src]="imageUrl"
+        alt="Certificate - {{ certificate.studentName }}"
+        class="cert-image"
+        [class.loaded]="imageLoaded"
+        (load)="onImageLoad()"
+        (error)="onImageError()"
+      />
+
+      <!-- Error -->
+      <div class="image-error" *ngIf="imageError">
+        <div class="error-icon">⚠️</div>
+        <p>Certificate image could not be loaded</p>
+        <button class="btn-retry" (click)="retryImageLoad()">
+          Try Again
+        </button>
+      </div>
+
+      <!-- Download -->
+      <!-- <div class="download-actions" *ngIf="imageLoaded && certificate.pdfUrl">
+        <button class="btn-download" (click)="downloadPdf()">
+          <svg width="20" height="20" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download PDF
+        </button>
+      </div> -->
+
+    </section>
+
+    <!-- CERTIFICATE DETAILS -->
+    <section class="details-section">
+      <h2 class="details-title">Certificate Details</h2>
+
+      <div class="details-grid">
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2
+                       2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9
+                       2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <h4>Certificate ID</h4>
+            <p>{{ certificate.certificateId }}</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4
+                       1.79-4 4 1.79 4 4 4zm0 2c-2.67
+                       0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <h4>Student Name</h4>
+            <p>{{ certificate.studentName }}</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4
+                       19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <h4>Course Name</h4>
+            <p>{{ certificate.courseName }}</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4
+                       1.79-4 4 1.79 4 4 4zm0 2c-2.67
+                       0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <h4>Instructor</h4>
+            <p>{{ certificate.instructor }}</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2
+                       .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0
+                       2-.9 2-2V6c0-1.1-.9-2-2-2z"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <h4>Start Date</h4>
+            <p>{{ certificate.startDate }}</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2
+                       .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0
+                       2-.9 2-2V6c0-1.1-.9-2-2-2z"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <h4>End Date</h4>
+            <p>{{ certificate.endDate }}</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10
+                       10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11
+                       13V7h1.5v5.2l4.5 2.7-.8 1.3z"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <h4>Duration</h4>
+            <p>{{ certificate.duration }}</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5
+                       13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+            </svg>
+          </div>
+          <div class="detail-info">
+            <h4>Certificate Type</h4>
+            <p>{{ certificate.certificateType }}</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Authentic Banner -->
+      <div class="authentic-banner">
+        <div class="auth-icon">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="#2563EB" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+        <div class="auth-text">
+          <h4>This certificate is authentic</h4>
+          <p>Issued by ANORIX and verified in our secure database.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+      <div class="contact-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24"
+             fill="none" stroke="#2563EB" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1
+                   0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="contact-text">
+        <h4>Have questions about this certificate?</h4>
+        <p>
+          Contact us at
+          <a href="mailto:support@anorix.com">support&#64;anorix.com</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+</div>

@@ -1,0 +1,219 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\me\\AnorixCertificates\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31256625-4137-FC9F-3E04-AD33F2E276AD}|AnorixCertificates.API\\AnorixCertificates.API.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{31256625-4137-FC9F-3E04-AD33F2E276AD}|AnorixCertificates.API\\AnorixCertificates.API.csproj|solutionrelative:anorixcertificates.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31256625-4137-FC9F-3E04-AD33F2E276AD}|AnorixCertificates.API\\AnorixCertificates.API.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.api\\anorixcertificates.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{31256625-4137-FC9F-3E04-AD33F2E276AD}|AnorixCertificates.API\\AnorixCertificates.API.csproj|solutionrelative:anorixcertificates.api\\anorixcertificates.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18E1FC06-AE15-1C2A-F87B-ECF9C026BF9B}|AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.infrastructure\\services\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18E1FC06-AE15-1C2A-F87B-ECF9C026BF9B}|AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj|solutionrelative:anorixcertificates.infrastructure\\services\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31256625-4137-FC9F-3E04-AD33F2E276AD}|AnorixCertificates.API\\AnorixCertificates.API.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31256625-4137-FC9F-3E04-AD33F2E276AD}|AnorixCertificates.API\\AnorixCertificates.API.csproj|solutionrelative:anorixcertificates.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18E1FC06-AE15-1C2A-F87B-ECF9C026BF9B}|AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.infrastructure\\settings\\googlesheetssettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18E1FC06-AE15-1C2A-F87B-ECF9C026BF9B}|AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj|solutionrelative:anorixcertificates.infrastructure\\settings\\googlesheetssettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31256625-4137-FC9F-3E04-AD33F2E276AD}|AnorixCertificates.API\\AnorixCertificates.API.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.api\\controllers\\certificatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31256625-4137-FC9F-3E04-AD33F2E276AD}|AnorixCertificates.API\\AnorixCertificates.API.csproj|solutionrelative:anorixcertificates.api\\controllers\\certificatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC9D15F7-4A0E-1A77-5C59-3721A514B303}|AnorixCertificates.Core\\AnorixCertificates.Core.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.core\\dtos\\certificatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC9D15F7-4A0E-1A77-5C59-3721A514B303}|AnorixCertificates.Core\\AnorixCertificates.Core.csproj|solutionrelative:anorixcertificates.core\\dtos\\certificatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18E1FC06-AE15-1C2A-F87B-ECF9C026BF9B}|AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.infrastructure\\anorixcertificates.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{18E1FC06-AE15-1C2A-F87B-ECF9C026BF9B}|AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj|solutionrelative:anorixcertificates.infrastructure\\anorixcertificates.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18E1FC06-AE15-1C2A-F87B-ECF9C026BF9B}|AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.infrastructure\\services\\certificateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18E1FC06-AE15-1C2A-F87B-ECF9C026BF9B}|AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj|solutionrelative:anorixcertificates.infrastructure\\services\\certificateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC9D15F7-4A0E-1A77-5C59-3721A514B303}|AnorixCertificates.Core\\AnorixCertificates.Core.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.core\\models\\certificatetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC9D15F7-4A0E-1A77-5C59-3721A514B303}|AnorixCertificates.Core\\AnorixCertificates.Core.csproj|solutionrelative:anorixcertificates.core\\models\\certificatetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC9D15F7-4A0E-1A77-5C59-3721A514B303}|AnorixCertificates.Core\\AnorixCertificates.Core.csproj|c:\\users\\me\\anorixcertificates\\anorixcertificates.core\\models\\certificate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC9D15F7-4A0E-1A77-5C59-3721A514B303}|AnorixCertificates.Core\\AnorixCertificates.Core.csproj|solutionrelative:anorixcertificates.core\\models\\certificate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AnorixCertificates.API.http",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.API\\AnorixCertificates.API.http",
+              "RelativeDocumentMoniker": "AnorixCertificates.API\\AnorixCertificates.API.http",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.API\\AnorixCertificates.API.http",
+              "RelativeToolTip": "AnorixCertificates.API\\AnorixCertificates.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-05-15T22:24:55.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CertificateType.cs",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Core\\Models\\CertificateType.cs",
+              "RelativeDocumentMoniker": "AnorixCertificates.Core\\Models\\CertificateType.cs",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Core\\Models\\CertificateType.cs",
+              "RelativeToolTip": "AnorixCertificates.Core\\Models\\CertificateType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T08:51:55.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CertificateService.cs",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Infrastructure\\Services\\CertificateService.cs",
+              "RelativeDocumentMoniker": "AnorixCertificates.Infrastructure\\Services\\CertificateService.cs",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Infrastructure\\Services\\CertificateService.cs",
+              "RelativeToolTip": "AnorixCertificates.Infrastructure\\Services\\CertificateService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAcwDAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T08:53:24.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GoogleSheetsService.cs",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Infrastructure\\Services\\GoogleSheetsService.cs",
+              "RelativeDocumentMoniker": "AnorixCertificates.Infrastructure\\Services\\GoogleSheetsService.cs",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Infrastructure\\Services\\GoogleSheetsService.cs",
+              "RelativeToolTip": "AnorixCertificates.Infrastructure\\Services\\GoogleSheetsService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T08:53:32.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CertificatesController.cs",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.API\\Controllers\\CertificatesController.cs",
+              "RelativeDocumentMoniker": "AnorixCertificates.API\\Controllers\\CertificatesController.cs",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.API\\Controllers\\CertificatesController.cs",
+              "RelativeToolTip": "AnorixCertificates.API\\Controllers\\CertificatesController.cs",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAuwPIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T08:50:11.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.API\\appsettings.json",
+              "RelativeDocumentMoniker": "AnorixCertificates.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.API\\appsettings.json*",
+              "RelativeToolTip": "AnorixCertificates.API\\appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-15T09:20:17.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GoogleSheetsSettings.cs",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Infrastructure\\Settings\\GoogleSheetsSettings.cs",
+              "RelativeDocumentMoniker": "AnorixCertificates.Infrastructure\\Settings\\GoogleSheetsSettings.cs",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Infrastructure\\Settings\\GoogleSheetsSettings.cs",
+              "RelativeToolTip": "AnorixCertificates.Infrastructure\\Settings\\GoogleSheetsSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T22:21:23.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.API\\Program.cs",
+              "RelativeDocumentMoniker": "AnorixCertificates.API\\Program.cs",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.API\\Program.cs",
+              "RelativeToolTip": "AnorixCertificates.API\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwCoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T09:20:04.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CertificateDto.cs",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Core\\DTOs\\CertificateDto.cs",
+              "RelativeDocumentMoniker": "AnorixCertificates.Core\\DTOs\\CertificateDto.cs",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Core\\DTOs\\CertificateDto.cs",
+              "RelativeToolTip": "AnorixCertificates.Core\\DTOs\\CertificateDto.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA8wBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T08:52:20.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AnorixCertificates.Infrastructure",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj",
+              "RelativeToolTip": "AnorixCertificates.Infrastructure\\AnorixCertificates.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-15T13:46:27.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Certificate.cs",
+              "DocumentMoniker": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Core\\Models\\Certificate.cs",
+              "RelativeDocumentMoniker": "AnorixCertificates.Core\\Models\\Certificate.cs",
+              "ToolTip": "C:\\Users\\me\\AnorixCertificates\\AnorixCertificates.Core\\Models\\Certificate.cs",
+              "RelativeToolTip": "AnorixCertificates.Core\\Models\\Certificate.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA2wB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T08:51:42.375Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

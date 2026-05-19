@@ -1,0 +1,11 @@
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\bin\Debug\net10.0\AnorixCertificates.Core.deps.json
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\bin\Debug\net10.0\AnorixCertificates.Core.dll
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\bin\Debug\net10.0\AnorixCertificates.Core.pdb
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\obj\Debug\net10.0\AnorixCertificates.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\obj\Debug\net10.0\AnorixCertificates.Core.AssemblyInfoInputs.cache
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\obj\Debug\net10.0\AnorixCertificates.Core.AssemblyInfo.cs
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\obj\Debug\net10.0\AnorixCertificates.Core.csproj.CoreCompileInputs.cache
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\obj\Debug\net10.0\AnorixCertificates.Core.dll
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\obj\Debug\net10.0\refint\AnorixCertificates.Core.dll
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\obj\Debug\net10.0\AnorixCertificates.Core.pdb
+C:\Users\me\AnorixCertificates\AnorixCertificates.Core\obj\Debug\net10.0\ref\AnorixCertificates.Core.dll

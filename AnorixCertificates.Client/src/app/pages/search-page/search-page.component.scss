@@ -1,0 +1,377 @@
+// ══════════════════════════════════════════
+// Variables (Same as verify page)
+// ══════════════════════════════════════════
+$primary      : #2563EB;
+$primary-dark : #1d4ed8;
+$primary-light: #EFF6FF;
+$success      : #10B981;
+$success-dark : #059669;
+$danger       : #EF4444;
+$text-dark    : #1E293B;
+$text-mid     : #475569;
+$text-light   : #94a3b8;
+$border       : #E2E8F0;
+$white        : #ffffff;
+$bg           : #F8FAFC;
+$radius       : 16px;
+$shadow       : 0 4px 24px rgba(0, 0, 0, 0.08);
+
+// ══════════════════════════════════════════
+// Base
+// ══════════════════════════════════════════
+.page-wrapper {
+  min-height : 100vh;
+  background : $bg;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.main-content {
+  max-width: 1000px;
+  margin   : 0 auto;
+  padding  : 2rem 1.5rem 4rem;
+}
+
+// ══════════════════════════════════════════
+// Hero Section
+// ══════════════════════════════════════════
+.hero-section {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  text-align    : center;
+  margin-bottom : 2rem;
+
+  .hero-icon {
+    width          : 80px;
+    height         : 80px;
+    background     : linear-gradient(135deg, $success-dark 0%, $success 100%);
+    border-radius  : 50%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    margin-bottom  : 1.25rem;
+    box-shadow     : 0 8px 24px rgba($success, 0.3);
+  }
+
+  .hero-title {
+    font-size    : 2rem;
+    font-weight  : 700;
+    color        : $text-dark;
+    margin       : 0 0 0.5rem;
+  }
+
+  .hero-sub {
+    font-size : 1.05rem;
+    color     : $text-mid;
+    margin    : 0;
+    max-width : 480px;
+    line-height: 1.6;
+  }
+}
+
+// ══════════════════════════════════════════
+// Search Section
+// ══════════════════════════════════════════
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-card {
+  background   : $white;
+  border-radius: $radius;
+  padding      : 2rem;
+  box-shadow   : 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border       : 1px solid $border;
+}
+
+.search-title {
+  font-size     : 1.25rem;
+  font-weight   : 700;
+  color         : $text-dark;
+  margin        : 0 0 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom : 2px solid $border;
+}
+
+.search-box {
+  display  : flex;
+  gap      : 0.75rem;
+  width    : 100%;
+
+  &.has-error {
+    .input-wrapper {
+      border-color: $danger;
+      box-shadow  : 0 0 0 3px rgba($danger, 0.1);
+    }
+  }
+}
+
+.input-wrapper {
+  flex         : 1;
+  display      : flex;
+  align-items  : center;
+  gap          : 0.75rem;
+  height       : 52px;
+  border       : 1px solid $border;
+  border-radius: 12px;
+  padding      : 0 1rem;
+  background   : $white;
+  transition   : all 0.2s ease;
+
+  &:focus-within {
+    border-color: $primary;
+    box-shadow  : 0 0 0 3px rgba($primary, 0.1);
+  }
+
+  .input-icon {
+    display    : flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  input {
+    flex       : 1;
+    height     : 100%;
+    border     : none;
+    outline    : none;
+    font-size  : 1rem;
+    color      : $text-dark;
+    background : transparent;
+    font-family: 'Inter', sans-serif;
+
+    &::placeholder {
+      color: $text-light;
+    }
+  }
+}
+
+.btn-search {
+  display        : inline-flex;
+  align-items    : center;
+  justify-content: center;
+  gap            : 0.5rem;
+  height         : 52px;
+  padding        : 0 1.75rem;
+  border         : none;
+  border-radius  : 12px;
+  background     : $primary;
+  color          : $white;
+  font-size      : 1rem;
+  font-weight    : 600;
+  cursor         : pointer;
+  transition     : all 0.25s ease;
+  white-space    : nowrap;
+  font-family    : 'Inter', sans-serif;
+
+  &:hover {
+    background: $primary-dark;
+    transform : translateY(-1px);
+    box-shadow: 0 6px 16px rgba($primary, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.error-msg {
+  display    : flex;
+  align-items: center;
+  gap        : 0.5rem;
+  margin-top : 0.75rem;
+  color      : $danger;
+  font-size  : 0.875rem;
+  font-weight: 500;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+// ══════════════════════════════════════════
+// Info Section
+// ══════════════════════════════════════════
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-title {
+  font-size     : 1.25rem;
+  font-weight   : 700;
+  color         : $text-dark;
+  margin        : 0 0 1.25rem;
+  text-align    : center;
+}
+
+.info-grid {
+  display              : grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap                  : 1.25rem;
+}
+
+.info-item {
+  display      : flex;
+  align-items  : flex-start;
+  gap          : 1rem;
+  padding      : 1.25rem;
+  background   : $white;
+  border-radius: 12px;
+  border       : 1px solid $border;
+  box-shadow   : $shadow;
+  transition   : transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .info-icon {
+    width          : 44px;
+    height         : 44px;
+    background     : $primary-light;
+    border-radius  : 10px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-shrink    : 0;
+    box-shadow     : 0 2px 8px rgba($primary, 0.12);
+
+    svg {
+      width : 22px;
+      height: 22px;
+    }
+  }
+
+  .info-text {
+    h4 {
+      font-size  : 0.95rem;
+      font-weight: 700;
+      color      : $text-dark;
+      margin     : 0 0 0.3rem;
+    }
+
+    p {
+      font-size  : 0.875rem;
+      color      : $text-mid;
+      margin     : 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+// ══════════════════════════════════════════
+// Contact Section (Same as verify page)
+// ══════════════════════════════════════════
+.contact-section {
+  display      : flex;
+  align-items  : center;
+  gap          : 1.25rem;
+  background   : $white;
+  border-radius: $radius;
+  padding      : 1.5rem 2rem;
+  box-shadow   : $shadow;
+  border       : 1px solid $border;
+
+  .contact-icon {
+    width          : 56px;
+    height         : 56px;
+    background     : $primary-light;
+    border-radius  : 14px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-shrink    : 0;
+  }
+
+  .contact-text {
+    h4 {
+      font-size  : 1rem;
+      font-weight: 700;
+      color      : $text-dark;
+      margin     : 0 0 0.3rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color    : $text-mid;
+      margin   : 0;
+
+      a {
+        color          : $primary;
+        font-weight    : 600;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// ══════════════════════════════════════════
+// Responsive
+// ══════════════════════════════════════════
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .hero-section {
+    .hero-icon {
+      width : 64px;
+      height: 64px;
+
+      svg {
+        width : 36px;
+        height: 36px;
+      }
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+    }
+  }
+
+  .search-card {
+    padding: 1.25rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    text-align    : center;
+    padding       : 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    .hero-title {
+      font-size: 1.35rem;
+    }
+  }
+
+  .search-card {
+    padding      : 1rem;
+    border-radius: 12px;
+  }
+}

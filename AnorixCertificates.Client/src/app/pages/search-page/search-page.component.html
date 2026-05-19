@@ -1,0 +1,147 @@
+<div class="page-wrapper">
+
+  <app-header></app-header>
+
+  <main class="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+             stroke="white" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+      </div>
+      <h1 class="hero-title">Verify Your Certificate</h1>
+      <p class="hero-sub">
+        Enter the certificate ID to confirm its authenticity
+      </p>
+    </section>
+
+    <!-- Search Card -->
+    <section class="search-section">
+      <div class="search-card">
+        <h2 class="search-title">Certificate Verification</h2>
+
+        <div class="search-box" [class.has-error]="hasError">
+          <div class="input-wrapper">
+            <div class="input-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24"
+                   fill="none" stroke="#94a3b8" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <input
+              type="text"
+              [(ngModel)]="certificateId"
+              placeholder="Enter Certificate ID (e.g. B-1-ABC123)"
+              (keyup.enter)="searchCertificate()"
+              (input)="clearError()"
+              autocomplete="off"
+            />
+          </div>
+
+          <button
+            type="button"
+            class="btn-search"
+            (click)="searchCertificate()"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <span>Verify</span>
+          </button>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-msg" *ngIf="hasError">
+          <svg width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="#ef4444" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+          </svg>
+          <span>{{ errorMessage }}</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="info-section">
+      <h2 class="info-title">How It Works</h2>
+
+      <div class="info-grid">
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2
+                       2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9
+                       2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h4>Find Your ID</h4>
+            <p>Locate the certificate ID on your certificate document or QR code</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="#2563EB" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h4>Enter & Search</h4>
+            <p>Type the certificate ID in the search box above and click Verify</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="#2563EB" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h4>Get Results</h4>
+            <p>View the full certificate details and verify its authenticity</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24"
+             fill="none" stroke="#2563EB" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1
+                   0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="contact-text">
+        <h4>Need help with verification?</h4>
+        <p>
+          Contact us at
+          <a href="mailto:support@anorix.com">support&#64;anorix.com</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+</div>

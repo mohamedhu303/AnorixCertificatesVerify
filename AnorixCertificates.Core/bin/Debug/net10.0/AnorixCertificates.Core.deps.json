@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "AnorixCertificates.Core/1.0.0": {
+        "runtime": {
+          "AnorixCertificates.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AnorixCertificates.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

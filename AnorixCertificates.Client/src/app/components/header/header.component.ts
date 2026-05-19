@@ -16,7 +16,8 @@ export class HeaderComponent {
   ) {}
 
   get showBackButton(): boolean {
-    return !this.router.url.startsWith('/search');
+    const currentUrl = this.router.url.split('?')[0].split('#')[0];
+    return currentUrl !== '/search' && currentUrl !== '/home';
   }
 
   goBack(): void {

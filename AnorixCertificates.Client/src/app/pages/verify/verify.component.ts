@@ -22,11 +22,12 @@ export class VerifyComponent implements OnInit {
   errorMessage = '';
   verifiedAt = '';
 
-  // Image States
   imageUrl: SafeUrl | null = null;
   imageLoaded = false;
   imageError = false;
   imageLoading = true;
+
+  private readonly API_BASE = 'https://api-anorix.runasp.net/api/certificates';
 
   constructor(
     private route: ActivatedRoute,
@@ -65,54 +66,13 @@ export class VerifyComponent implements OnInit {
   }
 
   private buildImageUrl(): void {
-    if (!this.certificate) {
-      this.imageLoading = false;
-      this.imageError = true;
-      return;
-    }
+    if (!this.certificate?.certificateId) return;
 
-    const rawImageUrl =
-      (this.certificate as any).imageUrl ||
-      (this.certificate as any).certificateImageUrl ||
-      (this.certificate as any).certificateImage ||
-      (this.certificate as any).image ||
-      '';
-
-    if (!rawImageUrl) {
-      this.imageLoading = false;
-      this.imageLoaded = false;
-      this.imageError = true;
-      return;
-    }
-
-    const directImageUrl = this.convertGoogleDriveImageUrl(rawImageUrl);
-
-    this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(directImageUrl);
+    const url = `${this.API_BASE}/image/${encodeURIComponent(this.certificate.certificateId)}`;
+    this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(url);
     this.imageLoading = true;
     this.imageLoaded = false;
     this.imageError = false;
-  }
-
-  private convertGoogleDriveImageUrl(url: string): string {
-    const trimmedUrl = url.trim();
-
-    const patterns = [
-      /\/file\/d\/([^/?]+)/,
-      /[?&]id=([^&]+)/,
-      /\/d\/([^/?]+)/,
-      /\/uc\?id=([^&]+)/,
-      /\/uc\?.*id=([^&]+)/
-    ];
-
-    for (const pattern of patterns) {
-      const match = trimmedUrl.match(pattern);
-      if (match && match[1]) {
-        const fileId = match[1];
-        return `https://drive.google.com/uc?export=view&id=${fileId}`;
-      }
-    }
-
-    return trimmedUrl;
   }
 
   onImageLoad(): void {
@@ -128,31 +88,12 @@ export class VerifyComponent implements OnInit {
   }
 
   retryImageLoad(): void {
-    if (!this.certificate) return;
-
-    const rawImageUrl =
-      (this.certificate as any).imageUrl ||
-      (this.certificate as any).certificateImageUrl ||
-      (this.certificate as any).certificateImage ||
-      (this.certificate as any).image ||
-      '';
-
-    if (!rawImageUrl) {
-      this.imageError = true;
-      this.imageLoading = false;
-      this.imageLoaded = false;
-      return;
-    }
-
+    if (!this.certificate?.certificateId) return;
     this.imageError = false;
     this.imageLoaded = false;
     this.imageLoading = true;
-
-    const directImageUrl = this.convertGoogleDriveImageUrl(rawImageUrl);
-    const separator = directImageUrl.includes('?') ? '&' : '?';
-    const refreshedUrl = `${directImageUrl}${separator}t=${Date.now()}`;
-
-    this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(refreshedUrl);
+    const url = `${this.API_BASE}/image/${encodeURIComponent(this.certificate.certificateId)}?t=${Date.now()}`;
+    this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(url);
   }
 
   downloadPdf(): void {

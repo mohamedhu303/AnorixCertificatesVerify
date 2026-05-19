@@ -1,5 +1,9 @@
 {
+  "outputDirectory": "dist/anorix-certificates/browser",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }

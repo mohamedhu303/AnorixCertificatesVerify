@@ -9,7 +9,7 @@ import { VerifyResponse } from '../models/certificate.model';
   providedIn: 'root'
 })
 export class CertificateService {
-  private apiUrl = 'https://localhost:7149/api/certificates';
+  private apiUrl = 'https://api-anorix.runasp.net/api/certificates';
 
   constructor(private http: HttpClient) {}
 

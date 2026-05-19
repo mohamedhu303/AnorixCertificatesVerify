@@ -66,9 +66,14 @@ export class VerifyComponent implements OnInit {
   }
 
   private buildImageUrl(): void {
-    if (!this.certificate?.certificateId) return;
+    if (!this.certificate?.certificateId) {
+      this.imageLoading = false;
+      this.imageError = true;
+      return;
+    }
 
     const url = `${this.API_BASE}/image/${encodeURIComponent(this.certificate.certificateId)}`;
+
     this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(url);
     this.imageLoading = true;
     this.imageLoaded = false;
@@ -89,9 +94,11 @@ export class VerifyComponent implements OnInit {
 
   retryImageLoad(): void {
     if (!this.certificate?.certificateId) return;
+
     this.imageError = false;
     this.imageLoaded = false;
     this.imageLoading = true;
+
     const url = `${this.API_BASE}/image/${encodeURIComponent(this.certificate.certificateId)}?t=${Date.now()}`;
     this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(url);
   }

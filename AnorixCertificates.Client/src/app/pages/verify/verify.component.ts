@@ -16,24 +16,22 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 })
 export class VerifyComponent implements OnInit {
 
-  certificate : CertificateData | null = null;
-  isValid      = false;
-  isLoading    = true;
+  certificate: CertificateData | null = null;
+  isValid = false;
+  isLoading = true;
   errorMessage = '';
-  verifiedAt   = '';
+  verifiedAt = '';
 
   // Image States
-  imageUrl    : SafeUrl | null = null;
-  imageLoaded  = false;
-  imageError   = false;
+  imageUrl: SafeUrl | null = null;
+  imageLoaded = false;
+  imageError = false;
   imageLoading = true;
 
-  private readonly API_BASE = 'https://localhost:7149/api/certificates';
-
   constructor(
-    private route      : ActivatedRoute,
+    private route: ActivatedRoute,
     private certService: CertificateService,
-    private sanitizer  : DomSanitizer
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -50,8 +48,8 @@ export class VerifyComponent implements OnInit {
       next: (response) => {
         if (response.isValid && response.data) {
           this.certificate = response.data;
-          this.isValid     = true;
-          this.verifiedAt  = this.formatDateTime(response.verifiedAt);
+          this.isValid = true;
+          this.verifiedAt = this.formatDateTime(response.verifiedAt);
           this.buildImageUrl();
         } else {
           this.handleError(response.message);
@@ -67,33 +65,94 @@ export class VerifyComponent implements OnInit {
   }
 
   private buildImageUrl(): void {
-    if (!this.certificate?.certificateId) return;
-    const url        = `${this.API_BASE}/image/${this.certificate.certificateId}`;
-    this.imageUrl    = this.sanitizer.bypassSecurityTrustUrl(url);
+    if (!this.certificate) {
+      this.imageLoading = false;
+      this.imageError = true;
+      return;
+    }
+
+    const rawImageUrl =
+      (this.certificate as any).imageUrl ||
+      (this.certificate as any).certificateImageUrl ||
+      (this.certificate as any).certificateImage ||
+      (this.certificate as any).image ||
+      '';
+
+    if (!rawImageUrl) {
+      this.imageLoading = false;
+      this.imageLoaded = false;
+      this.imageError = true;
+      return;
+    }
+
+    const directImageUrl = this.convertGoogleDriveImageUrl(rawImageUrl);
+
+    this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(directImageUrl);
     this.imageLoading = true;
-    this.imageLoaded  = false;
-    this.imageError   = false;
+    this.imageLoaded = false;
+    this.imageError = false;
+  }
+
+  private convertGoogleDriveImageUrl(url: string): string {
+    const trimmedUrl = url.trim();
+
+    const patterns = [
+      /\/file\/d\/([^/?]+)/,
+      /[?&]id=([^&]+)/,
+      /\/d\/([^/?]+)/,
+      /\/uc\?id=([^&]+)/,
+      /\/uc\?.*id=([^&]+)/
+    ];
+
+    for (const pattern of patterns) {
+      const match = trimmedUrl.match(pattern);
+      if (match && match[1]) {
+        const fileId = match[1];
+        return `https://drive.google.com/uc?export=view&id=${fileId}`;
+      }
+    }
+
+    return trimmedUrl;
   }
 
   onImageLoad(): void {
-    this.imageLoaded  = true;
+    this.imageLoaded = true;
     this.imageLoading = false;
-    this.imageError   = false;
+    this.imageError = false;
   }
 
   onImageError(): void {
-    this.imageError   = true;
+    this.imageError = true;
     this.imageLoading = false;
-    this.imageLoaded  = false;
+    this.imageLoaded = false;
   }
 
   retryImageLoad(): void {
-    if (!this.certificate?.certificateId) return;
-    this.imageError   = false;
-    this.imageLoaded  = false;
+    if (!this.certificate) return;
+
+    const rawImageUrl =
+      (this.certificate as any).imageUrl ||
+      (this.certificate as any).certificateImageUrl ||
+      (this.certificate as any).certificateImage ||
+      (this.certificate as any).image ||
+      '';
+
+    if (!rawImageUrl) {
+      this.imageError = true;
+      this.imageLoading = false;
+      this.imageLoaded = false;
+      return;
+    }
+
+    this.imageError = false;
+    this.imageLoaded = false;
     this.imageLoading = true;
-    const url         = `${this.API_BASE}/image/${this.certificate.certificateId}?t=${Date.now()}`;
-    this.imageUrl     = this.sanitizer.bypassSecurityTrustUrl(url);
+
+    const directImageUrl = this.convertGoogleDriveImageUrl(rawImageUrl);
+    const separator = directImageUrl.includes('?') ? '&' : '?';
+    const refreshedUrl = `${directImageUrl}${separator}t=${Date.now()}`;
+
+    this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(refreshedUrl);
   }
 
   downloadPdf(): void {
@@ -103,9 +162,9 @@ export class VerifyComponent implements OnInit {
   }
 
   private handleError(message: string): void {
-    this.isValid      = false;
+    this.isValid = false;
     this.errorMessage = message;
-    this.isLoading    = false;
+    this.isLoading = false;
   }
 
   private formatDateTime(dateStr: string): string {
@@ -113,10 +172,10 @@ export class VerifyComponent implements OnInit {
       const date = new Date(dateStr);
       return `${date.toLocaleDateString('en-US', {
         month: 'long',
-        day  : 'numeric',
-        year : 'numeric'
+        day: 'numeric',
+        year: 'numeric'
       })} - ${date.toLocaleTimeString('en-US', {
-        hour  : '2-digit',
+        hour: '2-digit',
         minute: '2-digit',
         hour12: true
       })}`;
